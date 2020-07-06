@@ -1,15 +1,15 @@
 namespace POO31_PROJETOWCONSOLE
 {
-    public class Contato : Mensagem
+    public class Contato 
     {
         public string Nome {get; set;}
 
-        public int Telefone {get; set;}    
+        public string Telefone {get; set;}    
 
 
-        public Contato(){
-            System.Console.WriteLine($"Nome:{Nome};Tel:{Telefone};");
-            
+        public Contato(string _nome, string _telefone){
+        this.Nome = _nome;
+        this.Telefone = _telefone;
         }
     }
 }

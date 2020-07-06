@@ -4,9 +4,11 @@ namespace POO31_PROJETOWCONSOLE
     {
         public string Texto {get; set;}
 
-        public void Destinatario (Contato _contato){
-            
-            System.Console.WriteLine(Texto);
+        public Contato Destinatario { get; set;}
+
+        public string Enviar(){
+            return $"Para: {Destinatario.Nome},\nMensagem: {Texto}";
         }
+ 
     }
 }

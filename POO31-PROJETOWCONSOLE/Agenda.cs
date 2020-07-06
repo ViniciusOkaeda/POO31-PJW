@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace POO31_PROJETOWCONSOLE
 {
     public class Agenda : IAgenda
     {
-
+        List<Contato> contatinhos = new List<Contato>();
         private const string PATH = "Database/agenda.csv";
         
         public Agenda(){
@@ -20,49 +21,91 @@ namespace POO31_PROJETOWCONSOLE
             }
         }
 
-        public void Cadastrar(Contato cont)
-        {
-        }
 
-        public List<Agenda> Listar()
+
+        public List<Contato> Listar()
         {
-            List<Agenda> contatinhos = new List<Agenda>();
+                        // Lemos o arquivo e transformamos em um array de linhas
+            // [0] = codigo=1;nome=Gibson;preco=7500
+            // [1] = codigo=1;nome=Fender;preco=7500 
             string[] linhas = File.ReadAllLines(PATH);
+
             foreach(string linha in linhas){
+                
+                // Separamos os dados de cada linha com Split
+
                 string[] dado = linha.Split(";");
 
-                Agenda c   = new Agenda();
-                c.Telefone    = Int32.Parse( Separar(dado[0]) );
-                c.Nome      = Separar(dado[1]);
+                // Criamos instâncias de produtos para serem colocados na lista
+                Contato c = new Contato(dado[0] , dado[1]);
 
-                agenda.Add(c);
+                contatinhos.Add(c);
             }
 
-
+            contatinhos = contatinhos.OrderBy(y => y.Nome).ToList();
+            return contatinhos; 
         }
-
-        public void Excluir(string _contato)
+        public void Cadastrar(Contato cont)
         {
-        }
-
-        void Cadastrar(Agenda c)
-        {
-            var linha = new string[] { PrepararLinha(c) };
+            var linha = new string[] { PrepararLinha(cont) };
             File.AppendAllLines(PATH, linha);
+        }
+
+
+        public void Excluir(Contato cont)
+        {
+            List<string> linhas = new List<string>();
+
+            LerCSV(linhas);
+
+            // Removemos as linhas que tiverem o termo passado como argumento
+            linhas.RemoveAll(l => l.Contains(cont.Nome));
+
+            // Reescrevemos nosso csv do zero
+            ReescreverCSV(linhas);
         }
 
         
 
+
+
+
+
+
+        /// <summary>
+        /// Refatoração para ler o csv.
+        /// </summary>
+        /// <param name="linhas">le o csv</param>
+        private void LerCSV(List<string> linhas){
+            // Utilizamos a bliblioteca StreamReader para ler nosso .csv
+            using(StreamReader arquivo = new StreamReader(PATH))
+            {
+                string linha;
+                while((linha = arquivo.ReadLine()) != null)
+                {
+                    linhas.Add(linha);
+                }
+            }
+        }
+        
+        private void ReescreverCSV(List<string> lines){
+            // Reescrevemos nosso csv do zero
+            using(StreamWriter output = new StreamWriter(PATH))
+            {
+                foreach(string ln in lines)
+                {
+                    output.Write(ln + "\n");
+                }
+            }   
+        }
             private string Separar(string _coluna)
         {
 
             return _coluna.Split("=")[1];
         }
-
-
          private string PrepararLinha(Contato c)
         {
-            return $"nome={c.Nome};telefone={c.Telefone}";
+            return $"{c.Nome};{c.Telefone}";
         }
 
         

@@ -6,8 +6,8 @@ namespace POO31_PROJETOWCONSOLE
     {
          void Cadastrar (Contato cont);
 
-         void Excluir(string _contato);
+         void Excluir(Contato cont);
 
-         List<Agenda> Listar();
+         List<Contato> Listar();
     }
 }
