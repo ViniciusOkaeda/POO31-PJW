@@ -31,7 +31,6 @@ namespace POO31_PROJETOWCONSOLE
             foreach(string linha in linhas){
                 string[] dado = linha.Split(";");
 
-                // Criamos instâncias de produtos para serem colocados na lista
                 Agenda c   = new Agenda();
                 c.Telefone    = Int32.Parse( Separar(dado[0]) );
                 c.Nome      = Separar(dado[1]);
@@ -56,8 +55,7 @@ namespace POO31_PROJETOWCONSOLE
 
             private string Separar(string _coluna)
         {
-            // 0      1
-            // nome = Gibson
+
             return _coluna.Split("=")[1];
         }
 
