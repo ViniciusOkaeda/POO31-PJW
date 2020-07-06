@@ -21,9 +21,6 @@ namespace POO31_PROJETOWCONSOLE
                 File.Create(PATH).Close();
             }
         }
-
-
-
         public List<Contato> Listar()
         {
             // Lemos o arquivo e transformamos em um array de linhas
@@ -41,7 +38,6 @@ namespace POO31_PROJETOWCONSOLE
 
                 contatinhos.Add(c);
             }
-
             // ordena o nome dos contatos por ordem alfabética
             contatinhos = contatinhos.OrderBy(y => y.Nome).ToList();
             return contatinhos; 
@@ -51,8 +47,6 @@ namespace POO31_PROJETOWCONSOLE
             var linha = new string[] { PrepararLinha(cont) };
             File.AppendAllLines(PATH, linha);
         }
-
-
         public void Excluir(Contato cont)
         {
             List<string> linhas = new List<string>();
@@ -65,14 +59,6 @@ namespace POO31_PROJETOWCONSOLE
             // Reescrevemos nosso csv do zero
             ReescreverCSV(linhas);
         }
-
-        
-
-
-
-
-
-
         /// <summary>
         /// Refatoração para ler o csv.
         /// </summary>
@@ -88,7 +74,6 @@ namespace POO31_PROJETOWCONSOLE
                 }
             }
         }
-        
         private void ReescreverCSV(List<string> lines){
             // Reescrevemos nosso csv do zero
             using(StreamWriter output = new StreamWriter(PATH))
@@ -101,18 +86,11 @@ namespace POO31_PROJETOWCONSOLE
         }
             private string Separar(string _coluna)
         {
-
             return _coluna.Split("=")[1];
         }
          private string PrepararLinha(Contato c)
         {
             return $"{c.Nome};{c.Telefone}";
         }
-
-        
-       
-       
-       
-       
     }
 }

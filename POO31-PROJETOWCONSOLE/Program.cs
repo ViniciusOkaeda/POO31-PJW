@@ -24,7 +24,7 @@ namespace POO31_PROJETOWCONSOLE
         Mensagem msg = new Mensagem();
         msg.Destinatario = c3;
         msg.Texto = "Alo" + msg.Destinatario.Nome + "!";
-        System.Console.WriteLine( msg.Enviar() );
+        Console.WriteLine( msg.Enviar() );
         
         }
     }

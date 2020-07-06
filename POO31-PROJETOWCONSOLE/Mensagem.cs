@@ -9,6 +9,5 @@ namespace POO31_PROJETOWCONSOLE
         public string Enviar(){
             return $"Para: {Destinatario.Nome},\nMensagem: {Texto}";
         }
- 
     }
 }
