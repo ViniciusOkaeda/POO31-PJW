@@ -11,7 +11,8 @@ namespace POO31_PROJETOWCONSOLE
         
         public Agenda(){
             string pasta = PATH.Split('/')[0];
-
+            
+            //verifica se existe o diretório pasta, se nao existir ele cria o mesmo
             if(!Directory.Exists(pasta)){
             Directory.CreateDirectory(pasta);
             }
@@ -25,9 +26,8 @@ namespace POO31_PROJETOWCONSOLE
 
         public List<Contato> Listar()
         {
-                        // Lemos o arquivo e transformamos em um array de linhas
-            // [0] = codigo=1;nome=Gibson;preco=7500
-            // [1] = codigo=1;nome=Fender;preco=7500 
+            // Lemos o arquivo e transformamos em um array de linhas
+
             string[] linhas = File.ReadAllLines(PATH);
 
             foreach(string linha in linhas){
@@ -42,6 +42,7 @@ namespace POO31_PROJETOWCONSOLE
                 contatinhos.Add(c);
             }
 
+            // ordena o nome dos contatos por ordem alfabética
             contatinhos = contatinhos.OrderBy(y => y.Nome).ToList();
             return contatinhos; 
         }
