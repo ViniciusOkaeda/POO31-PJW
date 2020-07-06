@@ -1,0 +1,13 @@
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\bin\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.exe
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\bin\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.deps.json
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\bin\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.runtimeconfig.json
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\bin\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.runtimeconfig.dev.json
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\bin\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.dll
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\bin\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.pdb
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.csprojAssemblyReference.cache
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.AssemblyInfoInputs.cache
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.AssemblyInfo.cs
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.csproj.CoreCompileInputs.cache
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.dll
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.pdb
+C:\Users\vinny\OneDrive\Área de Trabalho\SENAI\BACK-END\POO31-PROJETOWCONSOLE\obj\Debug\netcoreapp3.1\POO31-PROJETOWCONSOLE.genruntimeconfig.cache
